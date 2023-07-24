@@ -1,2 +1,1 @@
-# Jwellery_Management-
-By saraswati
+# Saraswati-jwellery-management
