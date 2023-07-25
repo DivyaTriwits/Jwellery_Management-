@@ -263,7 +263,7 @@ td {
             <th>Jewelry Type</th>
             <th>Payment Details</th>
              <th>Card Number</th>
-            <th>Cost(Rs)</th>
+            <th>Price(Rs)</th>
             <th>Weight(gm)</th>
             <th>Discount(%)</th>
             <th>Total</th>
@@ -287,7 +287,7 @@ td {
             <td><?php echo $user->gold_type; ?></td>
             <td><?php echo $user->payment_details; ?></td>
             <td><?php echo $user->card_number; ?></td>
-            <td><?php echo $user->cost; ?></td>
+            <td><?php echo $user->price; ?></td>
             <td><?php echo $user->weight; ?></td>
             <td><?php echo $user->discount; ?></td>
             <td><?php echo $user->total; ?></td>

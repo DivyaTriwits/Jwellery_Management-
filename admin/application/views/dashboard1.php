@@ -647,7 +647,8 @@
                 <a href="<?php echo base_url(); ?>index.php/Users/view12"><button style="height:50px;width:100px;background-color: #F08080">ViewEmployee</button></a>
 
                 <a href="<?php echo base_url(); ?>index.php/Users/viewjewelry"><button style="height:50px;width:150px;background-color:#F08080">Jewelrycategory</button></a>
-                 <a href="<?php echo base_url(); ?>index.php/Users/viewcategory1"><button style="height:50px;width:150px;background-color:#F08080">Jewelrycategory</button></a>
+                <a href="<?php echo base_url(); ?>index.php/Users/viewBangle"><button style="height:50px;width:150px;background-color:#F08080">Jewelrycategory</button></a>
+                 <!-- <a href="<?php echo base_url(); ?>index.php/Users/viewcategory1"><button style="height:50px;width:150px;background-color:#F08080">Jewelrycategory</button></a> -->
                 
                 
                 <br>

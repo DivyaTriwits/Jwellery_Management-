@@ -1,213 +1,186 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<div class="nav">
-  <input type="checkbox" id="nav-check">
-  <div class="nav-header">
-    <div class="nav-title">
-      <center>
-      Product Details
-    </center>
-    </div>
-  </div>
-  <div class="nav-btn">
-    <label for="nav-check">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </div>
-
-  <div class="nav-links">
-    
-    <center>
-    <a href="#" target="_blank">Stock</a>
-   </center>
-  </div>
 <title>Display records</title>
 </head>
 <style>
-<style>
-   {
-  box-sizing: border-box;
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
-
-body {
-  margin: 0px;
-  font-family: 'segoe ui';
-  background-color: #D5CDCC;
+table {
+  border-collapse: collapse;
+  width: 400%;
 }
-
-.nav {
-  height: 50px;
-  width: 100%;
-  background-color: #3482B5;
-  position: relative;
+th {
+  height: 70px;
 }
+</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>CodeIgniter Simple CRUD Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>bootstrap/css/bootstrap.min.css">
+  <style>
+ table { 
+  width: 1600px; 
+  border-collapse: collapse; 
+  margin:50px auto;
+  }
 
-.nav > .nav-header {
-  display: inline;
-}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+  }
 
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-}
+th { 
+  background: #3498db; 
+  color: white; 
+  font-weight: bold; 
+  }
 
-.nav > .nav-btn {
-  display: none;
-}
-
-.nav > .nav-links {
-  display: inline;
-  float: right;
+td, th { 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
   font-size: 18px;
-}
+  }
 
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-}
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
 
-.nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
+  table { 
+      width: 100%; 
+  }
 
-.nav > #nav-check {
-  display: none;
-}
-
-@media (max-width:800px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
   }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 5px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-}
   
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'segoe ui';
-  background-color: #D5CDCC;
-}
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr { border: 1px solid #ccc; }
+  
+  td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+  }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
 
-.container .product-card {
-  width: 500px;
-  margin: 10px;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 1px 1px 15px #cccccc40;
-  transition: 0.5s ease-in;
-}
+    color: #000;
+    font-weight: bold;
+  }
 
-.container .product-card:hover {
-  box-shadow: 1px 1px 28.5px -7px #d6d6d6;
 }
-
-.container .product-card img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.container .product-card .product-info {
-  text-align: center;
-}
-
-.container .product-card .product-info h2 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.container .product-card .product-info p {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.container .product-card .purchase-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #F08080;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in;
-}
-
-.container .product-card .purchase-btn:hover {
-  background-color: #E25858;
-}
-
 </style>
 
-<body>
-  <div class="container">
-    <?php
-    foreach ($result as $user) {
-    ?>
-    <div class="product-card">
-      <td><img src="<?php echo base_url('uploads/images/'.$user->file); ?>" width="300" height="300"> </td> 
-      <div class="product-info">
-        
-        <a href="<?php echo base_url(); ?>index.php/Users/viewpurchase" class="purchase-btn">Purchase</a>
-      </div>
+<div class="container">
+  <center>
+  <h1 class="page-header text-center">Stock</h1>
+</center>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <a href="<?php echo base_url(); ?>index.php/Users/addnew" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> </a>
+
+      <center>
+      <a href="<?php echo base_url(); ?>index.php/Users/viewbangles">
+          <button style="height:50px;width:100px;background-color: #F08080">Addstock</button></a>
+
+
+     
+
+      <a href="<?php echo base_url(); ?>index.php/Users/back"><button style="height:50px;width:100px;background-color: #F08080">Back</button></a>
+      </center>
+
+      
+                 
+        <thead>
+          <table width="600" border="0" cellspacing="5" cellpadding="5">
+  <tr style="background:#CCC">
+    <table class="center">
+            <th>Id</th>
+            <th>File</th>
+             <th>Gold Type</th>
+            <th>Weight(gm)</th>
+            <th>Price(Rs)</th>
+            <th>Discount(%)</th>
+            <th>Description</th>
+            
+            
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                      
+        <?php
+        $cnt=1;
+          foreach($result as $user) 
+          {
+            ?>
+           
+             
+             <tr>
+               <td><?php echo $cnt; ?></td>
+               <td><img src="<?php echo base_url('uploads/images/'.$user->file); ?>" width="100" height="100"> </td>         
+           <div> <td><?php echo $user->gold_type; ?></td></div>
+            <td><?php echo $user->weight; ?></td>
+            <td><?php echo $user->price; ?></td>
+            <td><?php echo $user->discount; ?></td>
+            <td><?php echo $user->description; ?>
+            </td>
+            
+            
+            
+            
+
+               
+          
+
+          
+            <?php
+             $cnt++;
+          }
+          ?>
+             
+            
+          
+          
+          
+</table>
+</div>
+</div>
+
+              
+             
+            
+        </tbody>
+      </table>
     </div>
-    <?php
-    }
-    ?>
   </div>
+</div>
 </body>
 </html>
-

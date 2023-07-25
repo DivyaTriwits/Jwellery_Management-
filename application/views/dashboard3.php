@@ -212,9 +212,9 @@ src="https://cdn.dribbble.com/users/2007778/screenshots/14703451/media/a8cad900d
 
         <li><a href="<?php echo base_url(); ?>index.php/Users/view">Product Details</a></li>
          
-        <li><a href="<?php echo base_url(); ?>index.php/Users/viewjewelry">ViewJewelrycategory</a></li>
+        <!-- <li><a href="<?php echo base_url(); ?>index.php/Users/viewjewelry">ViewJewelrycategory</a></li> -->
         
-        <li><a href="<?php echo base_url(); ?>index.php/Users/view1234">viewPurchase</a></li>
+        <!-- <li><a href="<?php echo base_url(); ?>index.php/Users/view1234">viewPurchase</a></li> -->
 
         
 

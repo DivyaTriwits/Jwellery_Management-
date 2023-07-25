@@ -109,8 +109,8 @@ button {
                        <?php } ?>
 
                         <div class="form-group">
-  <label for="number">Jewelry<span class="tx-danger">*</span></label>
-  <input type="text" class="form-control" placeholder="Jewelry" name="readOnlyInput" id="gold_type" readonly value="<?php echo $user->gold_type; ?>" />
+  <label for="number">Gold Type<span class="tx-danger">*</span></label>
+  <input type="text" class="form-control" placeholder="gold_type" name="readOnlyInput" id="gold_type" readonly value="<?php echo $user->gold_type; ?>" />
 </div> 
 
          <!-- <div class="dropdown">  
@@ -196,8 +196,9 @@ button {
   <input type="text" class="form-control" minlength="" maxlength="10" placeholder="Enter cost" name="cost" id="cost" onkeypress="return isNumber(event);" required />
 </div>  -->
  <div class="form-group">
-  <label for="number">Cost(Rs)<span class="tx-danger">*</span></label>
-  <input type="text" class="form-control" placeholder="Cost" name="readOnlyInput" id="price" readonly value="<?php echo $user->price; ?>" />
+  <label for="number">Price(Rs)<span class="tx-danger">*</span></label>
+  <input type="text" class="form-control" placeholder="price" name="readOnlyInput" id="price" readonly value="<?php echo $user->price; ?>" />
+
 </div> 
  <!-- <div class="form-group">
   <label for="number">Weight(gm)<span class="tx-danger">*</span></label>
@@ -423,7 +424,7 @@ function isValidDate(date) {
     </script>
     <script>
     function getPrice() {         
- var numVal1 = Number(document.getElementById("cost").value);
+ var numVal1 = Number(document.getElementById("price").value);
  var numVal2 = Number(document.getElementById("discount").value);
 
  var totalValue = numVal1 * ( (100-numVal2) / 100 )

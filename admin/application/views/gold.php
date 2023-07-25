@@ -143,7 +143,7 @@ button {
   <label>Description:</label>
   <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
     <input type="text" class="form-control" name="description" 
-    id="description" onkeypress="return isNumber(event);" required /> 
+    id="description" onkeypress="return allowOnlyLetters( event,this);" required /> 
     <br>
   
   <div class="form-group">

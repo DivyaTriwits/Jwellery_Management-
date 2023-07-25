@@ -108,11 +108,7 @@ only screen and (max-width: 760px),
 
       <center>
       <a href="<?php echo base_url(); ?>index.php/Users/viewaddstock">
-          <button style="height:50px;width:100px;background-color: #F08080">Addstock</button></a>
-
-
-     
-
+          <button style="height:50px;width:100px;background-color: #F08080">AddEarings</button></a>
       <a href="<?php echo base_url(); ?>index.php/Users/back"><button style="height:50px;width:100px;background-color: #F08080">Back</button></a>
       </center>
 

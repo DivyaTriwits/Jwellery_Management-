@@ -129,7 +129,7 @@ only screen and (max-width: 760px),
             <th>Price(Rs)</th>
             <th>Discount(%)</th>
             <th>Description</th>
-            <th>Action</th>
+           
             
                       </tr>
                     </thead>
@@ -155,10 +155,7 @@ only screen and (max-width: 760px),
             
             
             
-             <td><a href="<?php echo base_url(); ?>index.php/users/edit/<?php echo $user->id; ?>" class="btn btn-success">
-
-                <span class="glyphicon glyphicon-edit"></span> Edit</a> || <a href="<?php echo base_url(); ?>index.php/users/delete/<?php echo $user->id; ?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a></td>
-            </tr>
+                        </tr>
           
 
           

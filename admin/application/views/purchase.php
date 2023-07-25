@@ -128,7 +128,7 @@ button {
 </div>
 <div class="form-group">
   <label>Cost:</label>
-  <input type="text" placeholder="Enter cost" name="cost" id="cost" onkeypress="return isNumber(event);" required />
+  <input type="text" placeholder="Enter cost" name="price" id="price" onkeypress="return isNumber(event);" required />
 </div>
 <div class="form-group">
   <label>Weight:</label>

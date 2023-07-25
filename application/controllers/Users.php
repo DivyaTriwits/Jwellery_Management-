@@ -3,8 +3,8 @@
   ob_start(); 
   class Users extends CI_Controller {
    public function __construct() {
-     error_reporting(0);
-     ini_set("display_errors", 0);
+      error_reporting(0);
+      ini_set("display_errors", 0);
      parent::__construct();
      $this->load->helper('url','file','download');
      $this->load->library('session');
@@ -622,6 +622,10 @@ public function downloadPDF()
         //storing the data into the array
         $formArray = array();
         $formArray['gold_type'] = $this->input->post('gold_type');
+         $formArray['price'] = $this->input->post('price');
+         $formArray['weight'] = $this->input->post('weight');
+          $formArray['discount'] = $this->input->post('discount');
+           $formArray['description'] = $this->input->post('description');
         $formArray['file'] = $picture;
         // calling the create function in user_model
         $check=$this->Users_model->uploadimg123($formArray);
@@ -865,6 +869,14 @@ public function downloadPDF()
 
 
       }
+       public function viewBeg($id){
+        $this->load->model('Users_model');
+        $data['result']=$this->Users_model->getBeg($id);
+        $this->load->view("productj",$data);
+
+
+      }
+      
 
 }
   ?>

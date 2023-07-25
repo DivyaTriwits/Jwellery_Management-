@@ -128,7 +128,7 @@ only screen and (max-width: 760px),
             <th>Price(Rs)</th>
             <th>Discount(%)</th>
             <th>Description</th>
-            <th>Action</th>
+            
             
                       </tr>
                     </thead>

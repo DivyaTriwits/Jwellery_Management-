@@ -215,7 +215,7 @@
 				$formArray['name'] = $this->input->post('name');
 				$formArray['gold_type'] = $this->input->post('gold_type');
 				$formArray['payment_details'] = $this->input->post('payment_details');
-				$formArray['cost'] = $this->input->post('cost');
+				$formArray['price'] = $this->input->post('price');
 				$formArray['weight'] = $this->input->post('weight');
 			//$formArray['qty'] = $this->input->post('qty');
 				$formArray['discount'] = $this->input->post('discount');
@@ -421,10 +421,19 @@ public function getUsergold($id){
 		             ->get('diamond')
 		             ->result();
 		          }
+		          public function getBeg($id){
+		          return $this
+		             ->db
+		             ->select('*')
+		           ->where('id',$id)
+		           // ->limit($limit,$skip)
+		             ->get('bangles')
+		             ->result();
+		          
 
 		       }
 		
-
+}
 		?>
 
 

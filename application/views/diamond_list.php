@@ -1,3 +1,33 @@
+ <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <center>
+            Variety of Bangles
+
+    
+          </center>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+         
+        
+        <center>
+          <a href="<?php echo base_url(); ?>index.php/Users/back"><button style="height:50px;width:100px;background-color: #F08080">Back</button></a>
+
+        </center>
+      </div>
+      <title>Display records</title>
+    </head>
+
  <style>
       {
         box-sizing: border-box;

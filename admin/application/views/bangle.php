@@ -99,9 +99,9 @@ button {
       method="post" enctype="multipart/form-data" name="bangle">
 
 
-         <label for="name">Gold Type<span class="tx-danger">*</span></label>
+        <!--  <label for="name">Gold Type<span class="tx-danger">*</span></label>
                 <!-- <input type="text" class="form-control" name="subject" id="subject" required> -->
-                <select class="form-control" name="gold_type" id="gold_type">
+                <!-- <select class="form-control" name="gold_type" id="gold_type">
                                 <option selected="" disabled="">Select Gold Type</option>
                                <option value = "Ring">Ring  
                                </option>  
@@ -115,17 +115,56 @@ button {
                                 </option>  
                                    </datalist></option>                                  
                                    </select>            
-                                  </div>
-             
+                                  </div> -->
+              
         
         
-         
-       
-         <label >Upload the image:</label>
+         <label for="name">Product Name<span class="tx-danger">*</span></label>
+        <input type="text" class="form-control" name="gold_type" 
+    id="gold_type" onkeypress="return allowOnlyLetters( event,this);" required>
+        <!-- <input type="text" class="form-control" name="subject" id="subject" required> -->
+        <!-- <select class="form-control" name="product_name" id="product_name">
+          <option selected="" disabled="">Select Gold Type</option>
+          <option value = "Ring">Ring  
+          </option>  
+          <option value = "Necklace">Necklace   
+          </option>  
+          <option value = "chine">chine  
+          </option>  
+          <option value = "Earrings">Earrings  
+          </option> 
+          <option value = "Pendant">Pendant  
+          </option> 
+          <option value = "Bangles">Bangles  
+          </option> 
+        </datalist></option>                                  
+      </select>  -->           
+    </div>
+    
+    
+    
+    <label>Weight:</label>
+    <input type="text" placeholder="Enter weight" name="weight" id="weight" onkeypress="return isNumber(event);" required />
+    
+    <label>Price:</label>
+    <input type="text" class="form-control" name="price" 
+    id="price" onkeypress="return isNumber(event);" required /> 
+
+    <label>Discount(%):</label>
+    <input type="text" class="form-control" name="discount"
+    id="discount" onkeypress="return isNumber(event);" required /> 
+    
+    <label >Upload the image:</label>
     <input type='file' name='picture' id="picture" > <br/>
-        </div>
-    <br/>
-  
+  </div>
+  <br/>
+
+  <label>Description:</label>
+  <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
+    <input type="text" class="form-control" name="description" 
+    id="description" onkeypress="return allowOnlyLetters( event,this);" required /> 
+    <br>
+       
     <div class="form-group">
     <input type='submit' > <br/>
  </div>          

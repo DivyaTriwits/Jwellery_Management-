@@ -421,6 +421,11 @@
           //storing the data into the array
           $formArray = array();
           $formArray['gold_type'] = $this->input->post('gold_type');
+          $formArray['weight'] = $this->input->post('weight');
+        //$formArray['qty'] = $this->input->post('qty');
+          $formArray['price'] = $this->input->post('price');
+          $formArray['discount'] = $this->input->post('discount');
+          $formArray['description'] = $this->input->post('description');
           $formArray['file'] = $picture;
           // calling the create function in user_model
           $check=$this->Users_model->uploadimg123($formArray);

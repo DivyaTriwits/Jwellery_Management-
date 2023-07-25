@@ -192,7 +192,7 @@
 
                     <div class="field-container">
                         <label for="emp_id">Employee ID: <span class="required">*</span></label>
-                        <input type="text" name="emp_id"   pattern="^([a-zA-Z]{2,} ?)+$" id="emp_id" placeholder="Your employee Id" onkeypress="return  allowOnlyLetters( event,this);" maximum =10 characters required />
+                        <input type="text" name="emp_id"   pattern="^([a-zA-Z]{2,} ?)+$" id="emp_id" placeholder="Your employee Id" onkeypress="return " maximum =10 characters required />
                         <span class="error-messg"></span>              
                     </div>
                 
@@ -230,7 +230,8 @@
                         <div class="field-container">
                         <label for="proof">Proof:: <span class="required">*</span></label>
                         <div class="passkey-box">
-                        <input type='file' name='proof' id="proof" > <br/>
+                            <input type="text" name="proof"   pattern="^([a-zA-Z]{2,} ?)+$" id="proof" placeholder="Your  proof" onkeypress="return  allowOnlyLetters( event,this);" maximum =10 characters required />
+                        <!-- <input type='file' name='proof' id="proof" > <br/> -->
         
                         </div>
 

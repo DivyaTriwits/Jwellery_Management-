@@ -233,7 +233,7 @@ td {
         <thead>
           <tr>
             <th>Jewelry Type</th>
-            <th>Cost(Rs)</th>
+            <th>Price(Rs)</th>
             <th>Weight(gm)</th>
             <th>Discount(%)</th>
             <th>Total</th>

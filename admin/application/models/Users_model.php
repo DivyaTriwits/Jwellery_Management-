@@ -267,7 +267,7 @@ public function getsilver(){
 		$query = $this->db->get('diamond');
 		return $query->result(); 
 	}
-
+	
 }
 
 ?>

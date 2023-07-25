@@ -7,7 +7,7 @@
 <div class="container">
     <div class="brand">
         <center>
-      <img src="https://vignette4.wikia.nocookie.net/joke-battles/images/4/41/Infinity_Logo_Gold.png/revision/latest?cb=20151230235753" style="width: 40px"/>
+      <img src="https://vignette4.wikia.nocookie.net/joke-battles/images/4/41/Infinity_Logo_Gold.png/revision/latest?cb=20151230235753" style="width: 80px"/>
       <h2 style="color:white;">Golden Jewelry</h2>
   </center>
       </div>
@@ -39,6 +39,7 @@ body{
     border-radius: 10px;
 }
 .form p{
+    height:60px;
     font-size: 15px;
     padding: 1px;
     text-align: center;
@@ -47,7 +48,7 @@ body{
     outline: 0;
     border-radius: 10px;
     background: #F2F2F2;
-    width: 100%;
+    width: 80%;
     border: 0;
     margin: 0 0 15px;
     padding: 15px;
@@ -104,7 +105,7 @@ body{
   
 
     <div class="form">
-        <img src="https://www.krishnajewellers.com/blog/wp-content/uploads/2021/07/RV_10-scaled.jpg" style="width: 600px;height:400"/>
+        <img src="https://www.krishnajewellers.com/blog/wp-content/uploads/2021/07/RV_10-scaled.jpg" style="width: 300px;height:100"/>
         <form action="<?PHP echo base_url(). 'index.php/Users/loginuser' ?>" method = "POST" name="login">
 
     <p>Login</p>

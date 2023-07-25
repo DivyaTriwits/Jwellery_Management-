@@ -127,7 +127,7 @@
                   <th>Payment Type</th>
                   <th>Card Number</th>
                   <th>date</th>
-                  <th>Cost</th>
+                  <th>Price</th>
                   <th>Weight</th>
                   <th>Discount</th>
                   <th>total</th>
