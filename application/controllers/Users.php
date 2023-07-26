@@ -206,7 +206,7 @@ public function register(){
   $this->load->model('Users_model');
   $formArray=array();
 
-  $formArray['gold_type '] = $this->input->post('gold_type');
+  $formArray['gold_type'] = $this->input->post('gold_type');
   $formArray['weight'] = $this->input->post('weight');
   $formArray['price'] = $this->input->post('price');
 
@@ -876,6 +876,7 @@ public function downloadPDF()
 
 
       }
+
       
 
 }

@@ -300,20 +300,29 @@
 				$this->db->where('id', $id);
 				$this->db->update('addstock');
 			}
-				 public function getAllStocks($id){
-				 	$query = $this->db->get('addstock');
-				 	return $query->result(); 
-				 }
+				 // public function getAllStocks($id){
+				 // 	$query = $this->db->get('addstock');
+				 // 	return $query->result(); 
+				 // }
 
-			// public function getAllStocks($id){
-			// 	return $this
-			// 	->db
-			// 	->select('*')
-			// 	->where('id',$id)
-			// 	       // ->limit($limit,$skip)
-			// 	->get('addstock')
-			// 	->result();
-			// }
+			 public function getAllStocks($id){
+			 	return $this
+			 	->db
+			 	->select('*')
+			 	->where('id',$id)
+			 	       // ->limit($limit,$skip)
+			 	->get('addstock')
+			 	->result();
+			 }
+			 public function getAllStocksnecklace($id){
+			 	return $this
+			 	->db
+			 	->select('*')
+			 	->where('id',$id)
+			 	       // ->limit($limit,$skip)
+			 	->get('silver')
+			 	->result();
+			 }
 
 
 			public function uploadimg123($formArray){

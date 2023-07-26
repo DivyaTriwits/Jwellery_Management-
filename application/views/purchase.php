@@ -110,7 +110,7 @@ button {
 
                         <div class="form-group">
   <label for="number">Gold Type<span class="tx-danger">*</span></label>
-  <input type="text" class="form-control" placeholder="gold_type" name="readOnlyInput" id="gold_type" readonly value="<?php echo $user->gold_type; ?>" />
+  <input type="text" class="form-control" placeholder="gold_type" name="gold_type" id="gold_type" readonly value="<?php echo $user->gold_type; ?>" />
 </div> 
 
          <!-- <div class="dropdown">  
@@ -197,7 +197,7 @@ button {
 </div>  -->
  <div class="form-group">
   <label for="number">Price(Rs)<span class="tx-danger">*</span></label>
-  <input type="text" class="form-control" placeholder="price" name="readOnlyInput" id="price" readonly value="<?php echo $user->price; ?>" />
+  <input type="text" class="form-control" placeholder="price" name="price" id="price" readonly value="<?php echo $user->price; ?>" />
 
 </div> 
  <!-- <div class="form-group">
