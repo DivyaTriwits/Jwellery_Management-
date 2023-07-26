@@ -202,7 +202,7 @@
           foreach ($result as $user) {
           ?>
           <div class="product-card">
-            <a href="<?php echo base_url(); ?>index.php/Users/viewsilversil/<?php echo $user->id; ?>">
+            <a href="<?php echo base_url(); ?>index.php/Users/viewproductnecklace/<?php echo $user->id; ?>">
               <img src="<?php echo base_url('admin/uploads/images/'.$user->file); ?>" alt="Product Image" ></a>
               <div class="product-info">
                 <h2>Gold Type: <?php echo $user->gold_type; ?></h2>

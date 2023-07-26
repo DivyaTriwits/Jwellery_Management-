@@ -704,7 +704,7 @@
                         <br>
 
 
-                        <a href="<?php echo base_url(); ?>index.php/Users/viewpurchase/<?php echo $user->id; ?>" class="purchase-btn">
+                        <a href="<?php echo base_url(); ?>index.php/Users/viewpurchaseearing/<?php echo $user->id; ?>" class="purchase-btn">
                             <button style="height:50px;width:100px;background-color: #F08080">Purchase</button></a>
 
 

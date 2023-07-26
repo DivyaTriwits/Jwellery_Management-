@@ -69,6 +69,32 @@
   $data['result'] = $this->Users_model->getAllStocks($id);
   $this->load->view('purchase',$data); 
 }
+public function viewpurchaseneck($id){
+         // $this->load->view('purchase');
+  $this->load->model('Users_model');
+  $data['result'] = $this->Users_model->getAllStocksnecklace($id);
+  $this->load->view('purchase',$data); 
+}
+
+public function viewpurchasering($id){
+         // $this->load->view('purchase');
+  $this->load->model('Users_model');
+  $data['result'] = $this->Users_model->getAllStocksring($id);
+  $this->load->view('purchase',$data); 
+}
+public function viewpurchasebangle($id){
+         // $this->load->view('purchase');
+  $this->load->model('Users_model');
+  $data['result'] = $this->Users_model->getAllStocksbangle($id);
+  $this->load->view('purchase',$data); 
+}
+
+public function viewpurchaseearing($id){
+         // $this->load->view('purchase');
+  $this->load->model('Users_model');
+  $data['result'] = $this->Users_model->getAllStocksearing($id);
+  $this->load->view('purchase',$data); 
+}
 public function viewpurchaseinvoice(){
  $this->load->view('purchaseinvoice');
 }
@@ -480,13 +506,37 @@ public function uploadimage(){
 
 
       }
-      public function viewproductj1($id){
+      public function viewproductnecklace($id){
         $this->load->model('Users_model');
         $data['result']=$this->Users_model->getUsersproductj2($id);
-        $this->load->view("productj",$data);
+        $this->load->view("productnecklace",$data);
 
 
       }
+       public function viewproductring($id){
+        $this->load->model('Users_model');
+        $data['result']=$this->Users_model->getUsersproductring($id);
+        $this->load->view("productring",$data);
+
+
+      }
+      public function viewproductbangle($id){
+        $this->load->model('Users_model');
+        $data['result']=$this->Users_model->getUsersproductbangle($id);
+        $this->load->view("productbangle",$data);
+
+
+      }
+       public function viewproductearing($id){
+        $this->load->model('Users_model');
+        $data['result']=$this->Users_model->getUsersproductearing($id);
+        $this->load->view("productearing",$data);
+
+
+      }
+
+
+
 
       public function viewadminUser(){
         $this->load->model('Users_model');

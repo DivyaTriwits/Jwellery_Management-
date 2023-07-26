@@ -108,7 +108,7 @@ only screen and (max-width: 760px),
 
       <center>
       <a href="<?php echo base_url(); ?>index.php/Users/viewgold">
-          <button style="height:50px;width:100px;background-color: #F08080">Addgold</button></a>
+          <button style="height:50px;width:100px;background-color: #F08080">AddRing</button></a>
 
 
      
@@ -151,12 +151,6 @@ only screen and (max-width: 760px),
             <td><?php echo $user->discount; ?></td>
             <td><?php echo $user->description; ?>
             </td>
-            
-            
-            
-             <td><a href="<?php echo base_url(); ?>index.php/users/edit/<?php echo $user->id; ?>" class="btn btn-success">
-
-                <span class="glyphicon glyphicon-edit"></span> Edit</a> || <a href="<?php echo base_url(); ?>index.php/users/delete/<?php echo $user->id; ?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a></td>
             </tr>
           
 

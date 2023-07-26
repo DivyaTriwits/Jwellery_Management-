@@ -196,9 +196,36 @@
 				return $this
 				->db
 				->select('*')
-				->where('id',79)
+				->where('id',$id)
 			          // ->limit($limit,$skip)
-				->get('addstock')
+				->get('silver')
+				->result();
+			}
+			public function getUsersproductring($id){
+				return $this
+				->db
+				->select('*')
+				->where('id',$id)
+			          // ->limit($limit,$skip)
+				->get('gold')
+				->result();
+			}
+			public function getUsersproductbangle($id){
+				return $this
+				->db
+				->select('*')
+				->where('id',$id)
+			          // ->limit($limit,$skip)
+				->get('diamond')
+				->result();
+			}
+			public function getUsersproductearing($id){
+				return $this
+				->db
+				->select('*')
+				->where('id',$id)
+			          // ->limit($limit,$skip)
+				->get('bangles')
 				->result();
 			}
 
@@ -323,6 +350,37 @@
 			 	->get('silver')
 			 	->result();
 			 }
+
+			 public function getAllStocksring($id){
+			 	return $this
+			 	->db
+			 	->select('*')
+			 	->where('id',$id)
+			 	       // ->limit($limit,$skip)
+			 	->get('gold')
+			 	->result();
+			 }
+
+			 public function getAllStocksbangle($id){
+			 	return $this
+			 	->db
+			 	->select('*')
+			 	->where('id',$id)
+			 	       // ->limit($limit,$skip)
+			 	->get('diamond')
+			 	->result();
+			 }
+			 public function getAllStocksearing($id){
+			 	return $this
+			 	->db
+			 	->select('*')
+			 	->where('id',$id)
+			 	       // ->limit($limit,$skip)
+			 	->get('bangles')
+			 	->result();
+			 }
+
+
 
 
 			public function uploadimg123($formArray){

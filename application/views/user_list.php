@@ -1,45 +1,47 @@
-     <!DOCTYPE html>
-     <html>
-     <head>
-      <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-          <div class="nav-title">
-            <center>
-              Product Details
-              
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display records</title>
+
+  <style>
+    /* Your CSS styles here */
+    /* ... */
+  </style>
+  
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <input type="checkbox" id="MenuToggle">
+  <aside class="sidebar">
+    <nav>
+      <a href="#" class="logo">Logo</a>
+      <div class="nav_items">
+       <h2> Jewellery Category </h2>
 
               <a href="<?php echo base_url(); ?>index.php/Users/viewgoldlist" class="menu-item">Ring</a>
               <a href="<?php echo base_url(); ?>index.php/Users/viewsilverlist" class="menu-item">Necklace</a>
               <a href="<?php echo base_url(); ?>index.php/Users/viewdiamondlist" class="menu-item">Bangles</a>
               <a href="<?php echo base_url(); ?>index.php/Users/viewBangle" class="menu-item">Earings</a>
 
-      <!-- <a href="<?php echo base_url(); ?>index.php/Users/viewgoldlist">Ring</a>
-     <a href="<?php echo base_url(); ?>index.php/Users/viewsilverlist">Necklace</a>
-     <a href="<?php echo base_url(); ?>index.php/Users/viewdiamondlist">Bangles</a> -->
-     
-   </center>
- </div>
-</div>
-<div class="nav-btn">
-  <label for="nav-check">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-</div>
+      </div>
+    </nav>
+  </aside>
 
-<div class="nav-links">
- 
-  
-  <center>
-    <a href="<?php echo base_url(); ?>index.php/Users/back"><button style="height:50px;width:100px;background-color: #F08080">Back</button></a>
-
-  </center>
-</div>
-<title>Display records</title>
-</head>
-<style>
+  <!-- Main content -->
+  <main class="right">
+    <label for="MenuToggle" class="toggle__icon">
+      <span class="line line1"></span>
+      <span class="line line3"></span>
+      <span class="line line2"></span>
+    </label>
+    <div class="content">
+      <h2>jewellery category</h2>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+        <style>
   .menu-item {
     margin-right: 70px; /* Adjust the value as needed */
   }
@@ -210,24 +212,200 @@
 
 </style>
 
-<body>
-  <div class="container">
-    <?php
-      foreach ($result as $user) {
-      ?>
-      <div class="product-card">
-        <a href="<?php echo base_url(); ?>index.php/Users/viewproductj/<?php echo $user->id; ?>">
-          <img src="<?php echo base_url('admin/uploads/images/'.$user->file); ?>" alt="Product Image" ></a>
-          <div class="product-info">
-            <h2>Gold Type: <?php echo $user->gold_type; ?></h2>
-            <!-- <p>Weight: <?php echo $user->weight; ?></p> -->
-            <p>Price(Rs): <?php echo $user->price; ?></p>
-            <p>Discount(%): <?php echo $user->discount; ?></p>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,600&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  background: #f2f2f2;
+  overflow-x: hidden;
+  z-index: 1;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#MenuToggle {
+  display: none;
+  /* position: absolute;
+ top: 30px;
+ left: 350px; */
+}
+
+
+/* Left */
+
+.sidebar {
+  position: relative;
+  width: 250px;
+  height: 100%;
+  background: #020321;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all .8s ease;
+}
+
+
+/* For Navbar */
+
+.logo {
+  display: block;
+  font-size: 30px;
+  font-weight: 70;
+  text-align: center;
+  letter-spacing: .3px;
+  padding: 20px 0px;
+  background: #000831;
+}
+
+.nav_items {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav_items a {
+  display: block;
+  padding: 20px 0px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  transition: all .4s ease;
+}
+
+.nav_items a:hover,
+.nav_items a.active {
+  background: #000831;
+}
+
+
+/* Right */
+
+.right {
+  position: relative;
+  width: calc(100% - 250px);
+  height: 100%;
+  padding: 30px 30px;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  transition: all .8s ease;
+}
+
+.content {
+  width: 100%;
+}
+
+.content h2 {
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  color: #000831;
+  text-align: center;
+}
+
+
+/* Toggle bar */
+
+.toggle__icon {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.toggle__icon .line {
+  width: 24px;
+  height: 3px;
+  background-color: #000831;
+  margin: 6px 0;
+  display: block;
+  border-radius: 8px;
+}
+
+
+/* If Checked */
+
+#MenuToggle:checked~.sidebar {
+  width: 0;
+  transform: translateX(-250px);
+}
+
+#MenuToggle:checked~.right {
+  width: 100%;
+}
+  </style>
+
+
+        <?php foreach ($result as $user) { ?>
+          <div class="product-card">
+            <a href="<?php echo base_url(); ?>index.php/Users/viewproductj/<?php echo $user->id; ?>">
+              <img src="<?php echo base_url('admin/uploads/images/' . $user->file); ?>" alt="Product Image">
+            </a>
+            <div class="product-info">
+              <h2>Gold Type: <?php echo $user->gold_type; ?></h2>
+              <p>Price(Rs): <?php echo $user->price; ?></p>
+              <p>Discount(%): <?php echo $user->discount; ?></p>
+            </div>
           </div>
-        </div>
-        <?php
-        }
-      ?>
+        <?php } ?>
+      </div>
     </div>
-  </body>
-  </html>
+  </main>
+
+  <!-- JavaScript for sidebar toggle -->
+  <script>
+    const menuToggle = document.getElementById('MenuToggle');
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.right');
+
+    menuToggle.addEventListener('change', () => {
+      if (menuToggle.checked) {
+        sidebar.style.transform = 'translateX(0)';
+        mainContent.style.width = 'calc(100% - 250px)';
+      } else {
+        sidebar.style.transform = 'translateX(-250px)';
+        mainContent.style.width = '100%';
+      }
+    });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  var menuLinks = document.querySelectorAll(".nav ul li a");
+
+  // Event handler when menu item is clicked
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent following the link
+
+      var targetId = link.getAttribute("href"); // Get the href attribute
+      var targetSection = document.querySelector(targetId); // Get section by ID
+
+      // Smooth scrolling to section
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: "smooth"
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

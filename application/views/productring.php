@@ -692,8 +692,8 @@
                                     Always store your jewellery in a flat box to avoid accidental scratches
                                     Keep sprays and perfumes away from your jewellery
                                     Do not soak your jewellery in water
-                                Clean your jewellery using cleaning solutions only.</h4> -->
-
+                                Clean your jewellery using cleaning solutions only.</h4>
+ -->
 
                             </th>
                             <?php
@@ -704,7 +704,7 @@
                         <br>
 
 
-                        <a href="<?php echo base_url(); ?>index.php/Users/viewpurchase/<?php echo $user->id; ?>" class="purchase-btn">
+                        <a href="<?php echo base_url(); ?>index.php/Users/viewpurchasering/<?php echo $user->id; ?>" class="purchase-btn">
                             <button style="height:50px;width:100px;background-color: #F08080">Purchase</button></a>
 
 

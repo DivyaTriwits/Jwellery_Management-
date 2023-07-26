@@ -105,7 +105,7 @@ body{
   
 
     <div class="form">
-        <img src="https://www.krishnajewellers.com/blog/wp-content/uploads/2021/07/RV_10-scaled.jpg" style="width: 300px;height:100"/>
+        <img src="https://www.krishnajewellers.com/blog/wp-content/uploads/2021/07/RV_10-scaled.jpg" style="width: 400px;height:200"/>
         <form action="<?PHP echo base_url(). 'index.php/Users/loginuser' ?>" method = "POST" name="login">
 
     <p>Login</p>

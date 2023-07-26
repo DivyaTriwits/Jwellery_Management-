@@ -3,6 +3,134 @@
 <head>
 <title>Display records</title>
 </head>
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      Navbar
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+  <div class="nav-links">
+    <a>Stock</a>
+
+    <a href="<?php echo base_url(); ?>index.php/Users/viewaddstock">
+          Addstock</a>
+      
+    <a href="<?php echo base_url(); ?>index.php/Users/viewgoldlist" class="menu-item">Ring</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewsilverlist" class="menu-item">Necklace</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewdiamondlist" class="menu-item">Bangles</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewBangle" class="menu-item">Earings</a>
+             <a href="<?php echo base_url(); ?>index.php/Users/back">Back</a>
+  </div>
+</div>
+<style>
+{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+  background-color: #D5CDCC;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #3482B5;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:800px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+</style>
 <style>
 table, th, td {
   border: 1px solid black;
@@ -10,16 +138,17 @@ table, th, td {
 }
 table {
   border-collapse: collapse;
-  width: 400%;
+  width: 100%;
 }
 th {
   height: 70px;
 }
 </style>
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>CodeIgniter Simple CRUD Tutorial</title>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>bootstrap/css/bootstrap.min.css">
-  <style>
+  <!-- <style>
  table { 
   width: 1600px; 
   border-collapse: collapse; 
@@ -97,20 +226,20 @@ only screen and (max-width: 760px),
 
 }
 </style>
-
+ -->
 <div class="container">
-  <center>
+   <center>
   <h1 class="page-header text-center">Stock</h1>
-</center>
+</center> 
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
       <a href="<?php echo base_url(); ?>index.php/Users/addnew" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> </a>
 
-      <center>
+      <!-- <center>
       <a href="<?php echo base_url(); ?>index.php/Users/viewaddstock">
-          <button style="height:50px;width:100px;background-color: #F08080">AddEarings</button></a>
+          <button style="height:50px;width:100px;background-color: #F08080">Addstock</button></a>
       <a href="<?php echo base_url(); ?>index.php/Users/back"><button style="height:50px;width:100px;background-color: #F08080">Back</button></a>
-      </center>
+      </center> -->
 
       <form action="<?php echo base_url(); ?>index.php/uploadcsv/import" 
 method="post" name="upload_excel" enctype="multipart/form-data">

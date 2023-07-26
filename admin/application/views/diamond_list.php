@@ -108,7 +108,7 @@ only screen and (max-width: 760px),
 
       <center>
       <a href="<?php echo base_url(); ?>index.php/Users/viewdiamond">
-          <button style="height:50px;width:100px;background-color: #F08080">adddiamond</button></a>
+          <button style="height:50px;width:100px;background-color: #F08080">addBangles</button></a>
 
 
      

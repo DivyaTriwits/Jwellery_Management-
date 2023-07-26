@@ -387,7 +387,7 @@
       }
       public function back()
       {
-        $this->load->view('dashboard1');
+        
         $this->session->sess_destroy();
         $this->load->model('Users_model'); 
         $data['result']=$this->Users_model->getAllUsers();

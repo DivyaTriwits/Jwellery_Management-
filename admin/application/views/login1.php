@@ -10,7 +10,7 @@ background: #0a0ae9;
 }
 .form-style input{
 border:0;
-height:100px;
+height:200px;
 border-radius:0;
 border-bottom:1px solid #ebebeb;
 
@@ -56,7 +56,7 @@ margin: 0 0 0 20px;
 <div class="container">
 <div class="row m-5 no-gutters shadow-lg">
 <div class="col-md-6 d-none d-md-block">
-<img src="https://cdn1.jewelxy.com/live/img/business_product/N7R1b6C0gQ_20211031163738.jpg" style="width: 400px;height:300"/>
+<img src="https://zeevector.com/wp-content/uploads/Jewellery-Banner-Design-Background-1536x1491.png" style="width: 500px;height:400"/>
                       </div>
     <div id = "frm">  
         <h1>Login</h1>
