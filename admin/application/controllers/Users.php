@@ -197,13 +197,61 @@
           $formArray['weight'] = $this->input->post('weight');
         //$formArray['qty'] = $this->input->post('qty');
           $formArray['price'] = $this->input->post('price');
-          
+          $formArray['discount'] = $this->input->post('discount');
+          $formArray['description'] = $this->input->post('description');
+          $formArray['jewelry_id'] = $this->input->post('jewelry_id');
+           $formArray['stock'] = $this->input->post('stock');
           $formArray['file'] = $picture;
           // calling the create function in user_model
           $check=$this->Users_model->uploadimg($formArray);
           if($check==true){
             $this->load->model('Users_model'); 
             $data['result']=$this->Users_model->getAllUsers123();
+            $this->load->view('dashboard1',$data);
+          }
+        }
+
+        public function necklace(){
+         // here the user_model is loaded
+      $this->load->model('Users_model');
+      if(!empty($_FILES['picture']['name'])){
+          //set the path for the image storage
+        $config['upload_path'] = 'uploads/images/'; 
+            /*$config['file_path']= '/path/to/your/upload/';
+            $config['full_path']= '/path/to/your/upload/jpg.jpg';  */
+            // type of files allowed
+            $config['allowed_types'] = 'jpg|jpeg|png|gif|img|docx';
+            $config['file_name'] = $_FILES['picture']['name'];
+            //Load upload library and initialize configuration
+            $this->load->library('upload',$config);
+            $this->upload->initialize($config);
+            if($this->upload->do_upload('picture')){
+            // file uploading is done by this
+              $uploadData = $this->upload->data();
+              // the filename name is stored in a variable
+              $picture = $config['file_name'];
+            }else{
+              $picture = $config['file_name'];
+            }
+          }else{
+            $picture = $config['file_name'];
+          }
+          //storing the data into the array
+          $formArray = array();
+          $formArray['gold_type'] = $this->input->post('gold_type');
+          $formArray['weight'] = $this->input->post('weight');
+        //$formArray['qty'] = $this->input->post('qty');
+          $formArray['price'] = $this->input->post('price');
+          $formArray['discount'] = $this->input->post('discount');
+          $formArray['description'] = $this->input->post('description');
+          $formArray['jewelry_id'] = $this->input->post('jewelry_id');
+           $formArray['stock'] = $this->input->post('stock');
+          $formArray['file'] = $picture;
+          // calling the create function in user_model
+          $check=$this->Users_model->uploadimg($formArray);
+          if($check==true){
+            $this->load->model('Users_model'); 
+            $data['result']=$this->Users_model->getnecklace();
             $this->load->view('dashboard1',$data);
           }
         }
@@ -290,8 +338,8 @@
         $formArray=array();
         
         $formArray['jewelry_type'] = $this->input->post('jewelry_type');
-        $formArray['units'] = $this->input->post('units');
-        $formArray['division'] = $this->input->post('division');
+        $formArray['price'] = $this->input->post('price');
+        $formArray['discount'] = $this->input->post('discount');
         $formArray['description'] = $this->input->post('description');
         
         
@@ -393,7 +441,7 @@
         $data['result']=$this->Users_model->getAllUsers();
         $this->load->view('dashboard1',$data);
       }
-      public function Bangles(){
+      public function earing(){
          // here the user_model is loaded
         $this->load->model('Users_model');
         if(!empty($_FILES['picture']['name'])){
@@ -428,21 +476,21 @@
           $formArray['description'] = $this->input->post('description');
           $formArray['file'] = $picture;
           // calling the create function in user_model
-          $check=$this->Users_model->uploadimg123($formArray);
+          $check=$this->Users_model->uploadearingimg($formArray);
           if($check==true){
             $this->load->model('Users_model'); 
-            $data['result']=$this->Users_model->getAllBangles();
+            $data['result']=$this->Users_model->getAllearing();
             $this->load->view('dashboard1',$data);
           }
         }
-        public function viewbangles(){
-         $this->load->view('bangle');
+        public function viewearing(){
+         $this->load->view('earing');
        }
 
-       public function viewBangle(){
+       public function viewearinglist(){
         $this->load->model('Users_model');
-        $data['result']=$this->Users_model->getAllBangles();
-        $this->load->view("bangle_list",$data);
+        $data['result']=$this->Users_model->getAllearing();
+        $this->load->view("earing_list",$data);
         
         
       }
@@ -497,11 +545,11 @@
           $check=$this->Users_model->uploaddiamondimg($formArray);
           if($check==true){
             $this->load->model('Users_model'); 
-            $data['result']=$this->Users_model->getAllUsers123();
+            $data['result']=$this->Users_model->getbangle123();
             $this->load->view('dashboard1',$data);
           }
         }
-        public function goldimage(){
+        public function ringimage(){
          // here the user_model is loaded
       $this->load->model('Users_model');
       if(!empty($_FILES['picture']['name'])){
@@ -537,15 +585,15 @@
           
           $formArray['file'] = $picture;
           // calling the create function in user_model
-          $check=$this->Users_model->uploadgoldimg($formArray);
+          $check=$this->Users_model->uploadringimg($formArray);
           if($check==true){
             $this->load->model('Users_model'); 
-            $data['result']=$this->Users_model->getAllUsers123();
+            $data['result']=$this->Users_model->getring1();
             $this->load->view('dashboard1',$data);
           }
         }
 
-        public function silverimage(){
+        public function necklaceimage(){
          // here the user_model is loaded
       $this->load->model('Users_model');
       if(!empty($_FILES['picture']['name'])){
@@ -582,10 +630,10 @@
           $formArray['description'] = $this->input->post('description');
           
           // calling the create function in user_model
-          $check=$this->Users_model->uploadsilverimg($formArray);
+          $check=$this->Users_model->uploadnecklaceimg($formArray);
           if($check==true){
             $this->load->model('Users_model'); 
-            $data['result']=$this->Users_model->getAllUsers123();
+            $data['result']=$this->Users_model->getnecklace1();
             $this->load->view('dashboard1',$data);
           }
         }
@@ -595,29 +643,38 @@
       public function viewcategory1(){
        $this->load->view('category1');
      }
-     public function viewgold(){
-       $this->load->view('gold');
+     public function viewring(){
+       $this->load->view('ring');
      }
-      public function viewsilver(){
-       $this->load->view('silver');
+      public function viewnecklace(){
+       $this->load->view('necklace');
      }
-     public function viewdiamond(){
-       $this->load->view('diamond');
+     public function viewbangle123(){
+       $this->load->view('bangle123');
      }
-     public function viewsilverlist(){
+     public function viewnecklacelist(){
       $this->load->model('Users_model');
-      $data['result']=$this->Users_model->getsilver();
-      $this->load->view("silver_list",$data); 
+      $data['result']=$this->Users_model->getnecklace1();
+      $this->load->view("necklace_list",$data); 
     }
-    public function viewgoldlist(){
+    public function viewringlist(){
       $this->load->model('Users_model');
-      $data['result']=$this->Users_model->getgold();
-      $this->load->view("gold_list",$data); 
+      $data['result']=$this->Users_model->getring1();
+      $this->load->view("ring_list",$data); 
     }
-    public function viewdiamondlist(){
+    public function viewbangle123list(){
       $this->load->model('Users_model');
-      $data['result']=$this->Users_model->getdiamond();
-      $this->load->view("diamond_list",$data); 
+      $data['result']=$this->Users_model->getbangle123();
+      $this->load->view("bangle123_list",$data); 
+    }
+    // SELECT a.jewelry_id, a.[Gold Type], a.[Weight(gm)], a.[Price(Rs)], a.[Discount(%)], a.[Description], c.images
+    // FROM addstock a
+    //  INNER JOIN jewelry_category c ON a.category_id = c.category_id;
+
+    public function get_jewelry_data() {
+        $data['jewelry_data'] = $this->Users_model->get_jewelry_with_category();
+        // Load a view to display the data or process it as needed
+        $this->load->view('user_list', $data);
     }
 
       

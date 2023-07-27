@@ -161,6 +161,48 @@
 		$query = $this->db->get('addstock');
 		return $query->result(); 
 	}
+	public function getbangle123() {
+        // Use the 'or_where' method to filter rows with "gold_type" matching 'necklace1' or 'necklace'
+        $this->db->select('*')->where('gold_type', 'bangles')->or_where('gold_type', 'Bangles Stone');
+        
+        // Get the results from the 'addstock' table
+        $query = $this->db->get('addstock');
+
+        // Return the result set as an array
+        return $query->result();
+    }
+    public function getAllearing() {
+        // Use the 'or_where' method to filter rows with "gold_type" matching 'necklace1' or 'necklace'
+        $this->db->select('*')->where('gold_type', 'Earrings')->or_where('gold_type', 'Earrings');
+        
+        // Get the results from the 'addstock' table
+        $query = $this->db->get('addstock');
+
+        // Return the result set as an array
+        return $query->result();
+    }
+    
+    public function getnecklace1() {
+        // Use the 'or_where' method to filter rows with "gold_type" matching 'necklace1' or 'necklace'
+        $this->db->select('*')->where('gold_type', 'necklace')->or_where('gold_type', 'necklace1');
+        
+        // Get the results from the 'addstock' table
+        $query = $this->db->get('addstock');
+
+        // Return the result set as an array
+        return $query->result();
+    }
+     public function getring1() {
+        // Use the 'or_where' method to filter rows with "gold_type" matching 'necklace1' or 'necklace'
+        $this->db->select('*')->where('gold_type', 'Ring')->or_where('gold_type', 'Ring1');
+        
+        // Get the results from the 'addstock' table
+        $query = $this->db->get('addstock');
+
+        // Return the result set as an array
+        return $query->result();
+    }
+
 
 	public function getAllUsers1234(){
 		$query = $this->db->get('employee');
@@ -216,11 +258,11 @@
 		$this->db->insert('employee',$formArray);
 		return true;
 	}
-	public function uploadimg123($formArray){
+	public function uploadearingimg($formArray){
 	//to set the array data
 		$this->db->set($formArray);
 	// function to insert the data
-		$this->db->insert('bangles',$formArray);
+		$this->db->insert('addstock',$formArray);
 		return true;
 	}
 	public function getAllBangles(){
@@ -236,38 +278,45 @@
 	//to set the array data
 		$this->db->set($formArray);
 	// function to insert the data
-		$this->db->insert('diamond',$formArray);
+		$this->db->insert('addstock',$formArray);
 		return true;
 	}
 
-	public function uploadgoldimg($formArray){
+	public function uploadringimg($formArray){
 	//to set the array data
 		$this->db->set($formArray);
 	// function to insert the data
-		$this->db->insert('gold',$formArray);
+		$this->db->insert('addstock',$formArray);
 		return true;
 	}
 
-public function uploadsilverimg($formArray){
+public function uploadnecklaceimg($formArray){
 	//to set the array data
 		$this->db->set($formArray);
 	// function to insert the data
-		$this->db->insert('silver',$formArray);
+		$this->db->insert('addstock',$formArray);
 		return true;
 }
-public function getsilver(){
-		$query = $this->db->get('silver');
+public function getnecklace(){
+		$query = $this->db->get('addstock');
 		return $query->result(); 
 	}
-	public function getgold(){
-		$query = $this->db->get('gold');
-		return $query->result(); 
-	}
+	// public function getring(){
+	// 	$query = $this->db->get('addstock');
+	// 	return $query->result(); 
+	// }
 	public function getdiamond(){
 		$query = $this->db->get('diamond');
 		return $query->result(); 
 	}
-	
+	public function get_jewelry_with_category() {
+        $this->db->select('a.jewelry_id, a.`gold_type`, a.`weight(gm)`, a.`price(Rs)`, a.`discount(%)`, a.`description`, c.images');
+        $this->db->from('addstock a');
+        $this->db->join('jewelry_category c', 'a.category_id = c.category_id', 'inner');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
 }
 
 ?>

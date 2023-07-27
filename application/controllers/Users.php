@@ -520,13 +520,13 @@ public function uploadimage(){
 
 
       }
-      public function viewproductbangle($id){
-        $this->load->model('Users_model');
-        $data['result']=$this->Users_model->getUsersproductbangle($id);
-        $this->load->view("productbangle",$data);
+      // public function viewproductbangle($id){
+      //   $this->load->model('Users_model');
+      //   $data['result']=$this->Users_model->getUsersproductbangle($id);
+      //   $this->load->view("productbangle",$data);
 
 
-      }
+      // }
        public function viewproductearing($id){
         $this->load->model('Users_model');
         $data['result']=$this->Users_model->getUsersproductearing($id);
@@ -644,58 +644,58 @@ public function downloadPDF()
   public function viewproductj4(){
    $this->load->view('productj');
  }
- public function Bangles(){
-       // here the user_model is loaded
-  $this->load->model('Users_model');
-  if(!empty($_FILES['picture']['name'])){
-        //set the path for the image storage
-    $config['upload_path'] = 'admin/uploads/images/'; 
-          /*$config['file_path']= '/path/to/your/upload/';
-          $config['full_path']= '/path/to/your/upload/jpg.jpg';  */
-          // type of files allowed
-          $config['allowed_types'] = 'jpg|jpeg|png|gif|img|docx';
-          $config['file_name'] = $_FILES['picture']['name'];
-          //Load upload library and initialize configuration
-          $this->load->library('upload',$config);
-          $this->upload->initialize($config);
-          if($this->upload->do_upload('picture')){
-          // file uploading is done by this
-            $uploadData = $this->upload->data();
-            // the filename name is stored in a variable
-            $picture = $config['file_name'];
-          }else{
-            $picture = $config['file_name'];
-          }
-        }else{
-          $picture = $config['file_name'];
-        }
-        //storing the data into the array
-        $formArray = array();
-        $formArray['gold_type'] = $this->input->post('gold_type');
-         $formArray['price'] = $this->input->post('price');
-         $formArray['weight'] = $this->input->post('weight');
-          $formArray['discount'] = $this->input->post('discount');
-           $formArray['description'] = $this->input->post('description');
-        $formArray['file'] = $picture;
-        // calling the create function in user_model
-        $check=$this->Users_model->uploadimg123($formArray);
-        if($check==true){
-          $this->load->model('Users_model'); 
-          $data['result']=$this->Users_model->getAllBangles();
-          $this->load->view('dashboard1',$data);
-        }
-      }
-      public function viewbangles(){
-       $this->load->view('bangle');
+ // public function earing(){
+ //       // here the user_model is loaded
+ //  $this->load->model('Users_model');
+ //  if(!empty($_FILES['picture']['name'])){
+ //        //set the path for the image storage
+ //    $config['upload_path'] = 'admin/uploads/images/'; 
+ //          /*$config['file_path']= '/path/to/your/upload/';
+ //          $config['full_path']= '/path/to/your/upload/jpg.jpg';  */
+ //          // type of files allowed
+ //          $config['allowed_types'] = 'jpg|jpeg|png|gif|img|docx';
+ //          $config['file_name'] = $_FILES['picture']['name'];
+ //          //Load upload library and initialize configuration
+ //          $this->load->library('upload',$config);
+ //          $this->upload->initialize($config);
+ //          if($this->upload->do_upload('picture')){
+ //          // file uploading is done by this
+ //            $uploadData = $this->upload->data();
+ //            // the filename name is stored in a variable
+ //            $picture = $config['file_name'];
+ //          }else{
+ //            $picture = $config['file_name'];
+ //          }
+ //        }else{
+ //          $picture = $config['file_name'];
+ //        }
+ //        //storing the data into the array
+ //        $formArray = array();
+ //        $formArray['gold_type'] = $this->input->post('gold_type');
+ //         $formArray['price'] = $this->input->post('price');
+ //         $formArray['weight'] = $this->input->post('weight');
+ //          $formArray['discount'] = $this->input->post('discount');
+ //           $formArray['description'] = $this->input->post('description');
+ //        $formArray['file'] = $picture;
+ //        // calling the create function in user_model
+ //        $check=$this->Users_model->uploadearingimg($formArray);
+ //        if($check==true){
+ //          $this->load->model('Users_model'); 
+ //          $data['result']=$this->Users_model->getAllearing();
+ //          $this->load->view('dashboard1',$data);
+ //        }
+ //      }
+      public function viewearing(){
+       $this->load->view('earing');
      }
 
-     public function viewBangle(){
-      $this->load->model('Users_model');
-      $data['result']=$this->Users_model->getAllBangles();
-      $this->load->view("bangle_list",$data);
+    //  public function viewearinglist(){
+    //   $this->load->model('Users_model');
+    //   $data['result']=$this->Users_model->getAllearing();
+    //   $this->load->view("earing_list",$data);
 
 
-    }
+    // }
     public function bangles123(){
       //  $this->load->view('jewelrycategory');
       $this->load->model('Users_model');
@@ -775,11 +775,11 @@ public function downloadPDF()
             $check=$this->Users_model->uploaddiamondimg($formArray);
             if($check==true){
               $this->load->model('Users_model'); 
-              $data['result']=$this->Users_model->getAllUsers123();
+              $data['result']=$this->Users_model->getbangle123();
               $this->load->view('dashboard1',$data);
             }
           }
-          public function goldimage(){
+          public function ringimage(){
            // here the user_model is loaded
         $this->load->model('Users_model');
         if(!empty($_FILES['picture']['name'])){
@@ -815,15 +815,15 @@ public function downloadPDF()
             
             $formArray['file'] = $picture;
             // calling the create function in user_model
-            $check=$this->Users_model->uploadgoldimg($formArray);
+            $check=$this->Users_model->uploadringimg($formArray);
             if($check==true){
               $this->load->model('Users_model'); 
-              $data['result']=$this->Users_model->getAllUsers123();
+              $data['result']=$this->Users_model->getring1();
               $this->load->view('dashboard1',$data);
             }
           }
 
-          public function silverimage(){
+          public function necklaceimage(){
            // here the user_model is loaded
         $this->load->model('Users_model');
         if(!empty($_FILES['picture']['name'])){
@@ -860,10 +860,10 @@ public function downloadPDF()
             $formArray['description'] = $this->input->post('description');
             
             // calling the create function in user_model
-            $check=$this->Users_model->uploadsilverimg($formArray);
+            $check=$this->Users_model->uploadnecklaceimg($formArray);
             if($check==true){
               $this->load->model('Users_model'); 
-              $data['result']=$this->Users_model->getAllUsers123();
+              $data['result']=$this->Users_model->getnecklace1();
               $this->load->view('dashboard1',$data);
             }
           }
@@ -873,45 +873,53 @@ public function downloadPDF()
         public function viewcategory1(){
          $this->load->view('category1');
        }
-       public function viewgold(){
-         $this->load->view('gold');
+       public function viewring(){
+         $this->load->view('ring');
        }
-        public function viewsilver(){
-         $this->load->view('silver');
+        public function viewnecklace(){
+         $this->load->view('necklace');
        }
-       public function viewdiamond(){
-         $this->load->view('diamond');
+       public function viewbangle123(){
+         $this->load->view('bangle123');
        }
-       public function viewsilverlist(){
+       public function viewnecklacelist(){
         $this->load->model('Users_model');
-        $data['result']=$this->Users_model->getsilver();
-        $this->load->view("silver_list",$data); 
+        $data['result']=$this->Users_model->getnecklace1();
+        $this->load->view("necklace_list",$data); 
       }
-      public function viewgoldlist(){
+      public function viewringlist(){
         $this->load->model('Users_model');
-        $data['result']=$this->Users_model->getgold();
-        $this->load->view("gold_list",$data); 
+        $data['result']=$this->Users_model->getring1();
+        $this->load->view("ring_list",$data); 
       }
-      public function viewdiamondlist(){
+      public function viewbanglelist(){
         $this->load->model('Users_model');
-        $data['result']=$this->Users_model->getdiamond();
-        $this->load->view("diamond_list",$data); 
+        $data['result']=$this->Users_model->getbangle123();
+        $this->load->view("bangle123_list",$data); 
       }
-      public function viewgold1($id){
+      public function viewring1($id){
         $this->load->model('Users_model');
-        $data['result']=$this->Users_model->getUsergold($id);
+        $data['result']=$this->Users_model->getUserring($id);
         $this->load->view("productj",$data);
 
 
       }
-
-      public function viewdiamonddia($id){
-        $this->load->model('Users_model');
-        $data['result']=$this->Users_model->getdiamond1($id);
-        $this->load->view("productj",$data);
+       public function viewproductbangle($id){
+         $this->load->model('Users_model');
+         $data['result']=$this->Users_model->getUserbangle($id);
+         $this->load->view("productj",$data);
 
 
       }
+
+
+      // public function viewdiamonddia($id){
+      //   $this->load->model('Users_model');
+      //   $data['result']=$this->Users_model->getdiamond1($id);
+      //   $this->load->view("productj",$data);
+
+
+      //}
  public function viewsilversil($id){
         $this->load->model('Users_model');
         $data['result']=$this->Users_model->getsilver1($id);
@@ -919,15 +927,63 @@ public function downloadPDF()
 
 
       }
-       public function viewBeg($id){
+       public function viewearing1($id){
         $this->load->model('Users_model');
-        $data['result']=$this->Users_model->getBeg($id);
+        $data['result']=$this->Users_model->getearing($id);
         $this->load->view("productj",$data);
 
 
       }
 
-      
+     public function viewearinglist(){
+        $this->load->model('Users_model');
+        $data['result']=$this->Users_model->getAllearing();
+        $this->load->view("earing_list",$data);
+        
+        
+      }
+      public function earing(){
+         // here the user_model is loaded
+        $this->load->model('Users_model');
+        if(!empty($_FILES['picture']['name'])){
+          //set the path for the image storage
+          $config['upload_path'] = 'uploads/images/'; 
+            /*$config['file_path']= '/path/to/your/upload/';
+            $config['full_path']= '/path/to/your/upload/jpg.jpg';  */
+            // type of files allowed
+            $config['allowed_types'] = 'jpg|jpeg|png|gif|img|docx';
+            $config['file_name'] = $_FILES['picture']['name'];
+            //Load upload library and initialize configuration
+            $this->load->library('upload',$config);
+            $this->upload->initialize($config);
+            if($this->upload->do_upload('picture')){
+            // file uploading is done by this
+              $uploadData = $this->upload->data();
+              // the filename name is stored in a variable
+              $picture = $config['file_name'];
+            }else{
+              $picture = $config['file_name'];
+            }
+          }else{
+            $picture = $config['file_name'];
+          }
+          //storing the data into the array
+          $formArray = array();
+          $formArray['gold_type'] = $this->input->post('gold_type');
+          $formArray['weight'] = $this->input->post('weight');
+        //$formArray['qty'] = $this->input->post('qty');
+          $formArray['price'] = $this->input->post('price');
+          $formArray['discount'] = $this->input->post('discount');
+          $formArray['description'] = $this->input->post('description');
+          $formArray['file'] = $picture;
+          // calling the create function in user_model
+          $check=$this->Users_model->uploadearingimg($formArray);
+          if($check==true){
+            $this->load->model('Users_model'); 
+            $data['result']=$this->Users_model->getAllearing();
+            $this->load->view('dashboard1',$data);
+          }
+        }  
 
 }
   ?>

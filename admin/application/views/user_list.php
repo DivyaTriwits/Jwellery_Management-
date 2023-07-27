@@ -24,10 +24,10 @@
     <a href="<?php echo base_url(); ?>index.php/Users/viewaddstock">
           Addstock</a>
       
-    <a href="<?php echo base_url(); ?>index.php/Users/viewgoldlist" class="menu-item">Ring</a>
-              <a href="<?php echo base_url(); ?>index.php/Users/viewsilverlist" class="menu-item">Necklace</a>
-              <a href="<?php echo base_url(); ?>index.php/Users/viewdiamondlist" class="menu-item">Bangles</a>
-              <a href="<?php echo base_url(); ?>index.php/Users/viewBangle" class="menu-item">Earings</a>
+    <a href="<?php echo base_url(); ?>index.php/Users/viewringlist" class="menu-item">Ring</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewnecklacelist" class="menu-item">Necklace</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewbangle123list" class="menu-item">Bangles</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewearinglist" class="menu-item">Earings</a>
              <a href="<?php echo base_url(); ?>index.php/Users/back">Back</a>
   </div>
 </div>
@@ -256,6 +256,8 @@ method="post" name="upload_excel" enctype="multipart/form-data">
             <th>Price(Rs)</th>
             <th>Discount(%)</th>
             <th>Description</th>
+            <!-- <th>Jewery_id</th> -->
+            <th>Stock</th>
             <th>Action</th>
             
                       </tr>
@@ -278,6 +280,10 @@ method="post" name="upload_excel" enctype="multipart/form-data">
             <td><?php echo $user->price; ?></td>
             <td><?php echo $user->discount; ?></td>
             <td><?php echo $user->description; ?>
+            </td>
+           <!--  <td><?php echo $user->jewelry_id; ?>
+            </td> -->
+             <td><?php echo $user->stock; ?>
             </td>
             
             

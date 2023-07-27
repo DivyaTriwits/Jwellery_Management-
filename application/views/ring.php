@@ -95,13 +95,16 @@ button {
         <span class="pull-right"><a href="<?php echo base_url(); ?>" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> </a></span>
       </h3>
       <hr>
-      <form action="<?PHP echo base_url(). 'index.php/Users/uploadimage' ?>"
-        method="post" enctype="multipart/form-data" name="addstock">
+      <form action="<?PHP echo base_url(). 'index.php/Users/goldimage' ?>"
+        method="post" enctype="multipart/form-data" name="gold">
 
 
-        <label for="name">Gold Type<span class="tx-danger">*</span></label>
+        
+        <label for="name">Product Name<span class="tx-danger">*</span></label>
+        <input type="text" class="form-control" name="product_name" 
+    id="product_name" onkeypress="return allowOnlyLetters( event,this);" required>
         <!-- <input type="text" class="form-control" name="subject" id="subject" required> -->
-        <select class="form-control" name="gold_type" id="gold_type">
+        <!-- <select class="form-control" name="product_name" id="product_name">
           <option selected="" disabled="">Select Gold Type</option>
           <option value = "Ring">Ring  
           </option>  
@@ -116,7 +119,7 @@ button {
           <option value = "Bangles">Bangles  
           </option> 
         </datalist></option>                                  
-      </select>            
+      </select>  -->           
     </div>
     
     
@@ -140,17 +143,7 @@ button {
   <label>Description:</label>
   <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
     <input type="text" class="form-control" name="description" 
-    id="description" onkeypress="return allowOnlyLetters( event,this);" required /> 
-    <br>
-    <!-- <label>Jewelry id:</label>
-  <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
-    <!-- <input type="text" class="form-control" name="jewelry_id" 
-    id="jewelry_id" onkeypress="return isNumber(event);" required /> 
-    <br> --> -->
-    <label>Stock:</label>
-  <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
-    <input type="text" class="form-control" name="stock" 
-    id="stock" onkeypress="return isNumber(event);" required /> 
+    id="description" onkeypress="return isNumber(event);" required /> 
     <br>
   
   <div class="form-group">

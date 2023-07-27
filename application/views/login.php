@@ -39,7 +39,7 @@ body{
     border-radius: 10px;
 }
 .form p{
-    height:60px;
+    height:10px;
     font-size: 15px;
     padding: 1px;
     text-align: center;
@@ -105,7 +105,7 @@ body{
   
 
     <div class="form">
-        <img src="https://www.krishnajewellers.com/blog/wp-content/uploads/2021/07/RV_10-scaled.jpg" style="width: 400px;height:200"/>
+        <img src="https://www.kattam.in/cdn/shop/products/Bridal-American-Diamond-Necklace-Ruby-1_5c0f3757-c60f-455c-9d88-de270f3c2297_1000x.jpg?v=1651922952" style="width: 500px;height:250"/>
         <form action="<?PHP echo base_url(). 'index.php/Users/loginuser' ?>" method = "POST" name="login">
 
     <p>Login</p>

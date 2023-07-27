@@ -19,10 +19,11 @@
       <div class="nav_items">
        <h2> Jewellery Category </h2>
 
-              <a href="<?php echo base_url(); ?>index.php/Users/viewgoldlist" class="menu-item">Ring</a>
-              <a href="<?php echo base_url(); ?>index.php/Users/viewsilverlist" class="menu-item">Necklace</a>
-              <a href="<?php echo base_url(); ?>index.php/Users/viewdiamondlist" class="menu-item">Bangles</a>
-              <a href="<?php echo base_url(); ?>index.php/Users/viewBangle" class="menu-item">Earings</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewringlist" class="menu-item">Ring</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewnecklacelist" class="menu-item">Necklace</a>
+              <a href="<?php echo base_url(); ?>index.php/Users/viewbanglelist" class="menu-item">Bangles</a>
+              <!-- <a href="<?php echo base_url(); ?>index.php/Users/viewearinglist" class="menu-item">Earings</a> -->
+              <!-- <a href="<?php echo base_url(); ?>index.php/Users/viewearinglist" class="menu-item">Earings</a> -->
 
       </div>
     </nav>

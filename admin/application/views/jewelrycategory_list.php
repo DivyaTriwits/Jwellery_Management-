@@ -20,9 +20,9 @@
 
   <div class="nav-links">
     
-    <a href="<?php echo base_url(); ?>index.php/Users/viewgoldlist">Ring</a>
-   <a href="<?php echo base_url(); ?>index.php/Users/viewsilverlist">Necklace</a>
-    <a href="<?php echo base_url(); ?>index.php/Users/viewdiamondlist">Bangles</a>
+    <a href="<?php echo base_url(); ?>index.php/Users/viewringlist">Ring</a>
+   <a href="<?php echo base_url(); ?>index.php/Users/viewnecklacelist">Necklace</a>
+    <a href="<?php echo base_url(); ?>index.php/Users/viewbangle123list">Bangles</a>
   </div>
 </div>
 <style>
@@ -253,8 +253,8 @@ only screen and (max-width: 760px),
             <th>Id</th>
             <th>Jewelry Type</th>
             <th>images</th>
-            <th>Units</th>
-             <th>Division</th>
+            <th>Price</th>
+             <th>Discount</th>
             <th>Description</th>
             
                       </tr>
@@ -272,8 +272,8 @@ only screen and (max-width: 760px),
             <td><?php echo $user->id; ?></td>
             <td><?php echo $user->jewelry_type; ?></td>
             <td><img src="<?php echo base_url('uploads/images/'.$user->file); ?>" width="100" height="100"> </td>
-            <td><?php echo $user->units; ?></td>
-            <td><?php echo $user->division;?></td>
+            <td><?php echo $user->price; ?></td>
+            <td><?php echo $user->discount;?></td>
             <td><?php echo $user->description;?></td>
             
             

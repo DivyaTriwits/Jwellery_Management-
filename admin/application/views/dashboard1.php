@@ -532,14 +532,21 @@
               </a>
             </li>
 
-            <!-- <li>
-              <a href="<?php echo base_url(); ?>index.php/Users/viewjewelry">
+             <li>
+              <!-- <a href="<?php echo base_url(); ?>index.php/Users/viewjewelry">
 
                  <ion-icon name="settings-outline"></ion-icon> 
                 
                 <span class="title">Jewelrycategory</span>
               </a>
-            </li> -->
+            </li> 
+            <a href="<?php echo base_url(); ?>index.php/Users/get_jewelry_data">
+
+                 <ion-icon name="settings-outline"></ion-icon> 
+                
+                <span class="title">Jewelrycategory</span>
+              </a>
+            </li>  -->
 
             <li>
               <a href="<?php echo base_url(); ?>index.php/Users/viewsale12">
@@ -562,7 +569,7 @@
                 <!-- <span class="icon">
                   <ion-icon name="log-out-outline"></ion-icon>
                 </span> -->
-                <span class="title">Logout Out</span>
+                <span class="title">Logout</span>
               </a>
             </li>
           </ul>
