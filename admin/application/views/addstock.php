@@ -142,11 +142,11 @@ button {
     <input type="text" class="form-control" name="description" 
     id="description" onkeypress="return allowOnlyLetters( event,this);" required /> 
     <br>
-    <!-- <label>Jewelry id:</label>
-  <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
-    <!-- <input type="text" class="form-control" name="jewelry_id" 
-    id="jewelry_id" onkeypress="return isNumber(event);" required /> 
-    <br> --> -->
+     <!-- <label>Jewelry id:</label> -->
+   <!-- <textarea id="description" rows="4" cols="50"></textarea>  -->
+     <!-- <input type="text" class="form-control" name="jewelry_id" 
+    id="jewelry_id" onkeypress="return isNumber(event);" required />  -->
+    <!-- <br>  -->
     <label>Stock:</label>
   <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
     <input type="text" class="form-control" name="stock" 

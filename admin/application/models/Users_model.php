@@ -173,7 +173,7 @@
     }
     public function getAllearing() {
         // Use the 'or_where' method to filter rows with "gold_type" matching 'necklace1' or 'necklace'
-        $this->db->select('*')->where('gold_type', 'Earrings')->or_where('gold_type', 'Earrings');
+        $this->db->select('*')->where('gold_type', 'Earrings')->or_where('gold_type', 'Diamond Earings');
         
         // Get the results from the 'addstock' table
         $query = $this->db->get('addstock');

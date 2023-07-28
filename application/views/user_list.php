@@ -23,7 +23,7 @@
               <a href="<?php echo base_url(); ?>index.php/Users/viewnecklacelist" class="menu-item">Necklace</a>
               <a href="<?php echo base_url(); ?>index.php/Users/viewbanglelist" class="menu-item">Bangles</a>
               <!-- <a href="<?php echo base_url(); ?>index.php/Users/viewearinglist" class="menu-item">Earings</a> -->
-              <!-- <a href="<?php echo base_url(); ?>index.php/Users/viewearinglist" class="menu-item">Earings</a> -->
+              <a href="<?php echo base_url(); ?>index.php/Users/viewearinglist" class="menu-item">Earings</a>
 
       </div>
     </nav>

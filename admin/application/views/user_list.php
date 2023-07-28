@@ -256,7 +256,7 @@ method="post" name="upload_excel" enctype="multipart/form-data">
             <th>Price(Rs)</th>
             <th>Discount(%)</th>
             <th>Description</th>
-            <!-- <th>Jewery_id</th> -->
+            <!-- <th>Jewery_id</th>  -->
             <th>Stock</th>
             <th>Action</th>
             
