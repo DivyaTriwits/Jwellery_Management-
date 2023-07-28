@@ -198,7 +198,7 @@
 				->select('*')
 				->where('id',$id)
 			          // ->limit($limit,$skip)
-				->get('silver')
+				->get('addstock')
 				->result();
 			}
 			public function getUsersproductring($id){
@@ -347,7 +347,7 @@
 			 	->select('*')
 			 	->where('id',$id)
 			 	       // ->limit($limit,$skip)
-			 	->get('silver')
+			 	->get('addstock')
 			 	->result();
 			 }
 

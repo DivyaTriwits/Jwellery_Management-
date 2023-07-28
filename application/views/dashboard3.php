@@ -182,6 +182,38 @@ P{
       line-height: 25px;
       border-radius: 4px;
     }
+    .about .wrapper{
+  padding-top: 80px;
+}
+
+.about .left{
+  width:50%;
+  height: 300px;
+  background: url('http://maxpixel.freegreatpicture.com/static/photo/1x/Diamond-Luxury-Jewelry-Gold-Shiny-Precious-888286.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.about .right{
+  width: 50%;
+  height: 300px;  
+  float: left;
+  background: #fcbe32;
+}
+
+.about .right .text{
+  max-height: 300px;
+  color: #555;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 80px 10px 80px;
+  line-height: 1.5;
+}
+
 
 
 
@@ -208,9 +240,10 @@ src="https://cdn.dribbble.com/users/2007778/screenshots/14703451/media/a8cad900d
 <!--TOP NAV-->
     <nav id="nav-bar">
       <ul>
-        <li><a class="nav-link" href="#HOME">HOME</a></li>
+        <li><a class="nav-link" href="#HOME">Home</a></li>
+        <li><a class="nav-link" href="#HOME">About us</a></li>
 
-        <li><a href="<?php echo base_url(); ?>index.php/Users/view">Product Details</a></li>
+        <li><a class="nav-link" href="<?php echo base_url(); ?>index.php/Users/view">Product Details</a></li>
          
         <!-- <li><a href="<?php echo base_url(); ?>index.php/Users/viewjewelry">ViewJewelrycategory</a></li> -->
         
@@ -219,7 +252,8 @@ src="https://cdn.dribbble.com/users/2007778/screenshots/14703451/media/a8cad900d
         
 
        
-        <a href="<?php echo base_url(); ?>index.php/Users/logout">Logout</button></a>
+       <li> <a class="nav-link" href="<?php echo base_url(); ?>index.php/Users/logout">Logout</a>
+       </li>
 </ul>
     </nav>
   
@@ -254,10 +288,39 @@ src="https://cdn.dribbble.com/users/2007778/screenshots/14703451/media/a8cad900d
 <!--VIDEO-->
 
 </section> 
+
+<section class="section about" id="about">
+    <div class="section-head">
+        <h2>About Us</h2>
+        <p>Learn more about us and quality of our products</p>
+    </div>
+  
+  
+      <div class="wrapper clearfix">
+
+        <div class="left">
+        </div>
+
+        <div class="right">
+          <div class="text">
+            <h3>Who we are</h3>
+            <br/>
+            <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. <br/> <br/> The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
+            </p>
+          </div>
+        </div>
+        
+        
+
+      </div><!-- / wrapper -->
+  
+</section>
+
  
   <section id ="BLOG">
-<p>We make beautiful jewellery which are accessible,affordable and forever wearable.
-  As hundreds of women across the country, we came to find that there was a common dilemma women faced - picking between expensive jewellery for special occasion, and everyday jewellery that was of inferior quality and was not keeping pace with their changing lifestyle.We give women access to modern,fine jewellery,that was also wearable everyday. 
+<p>We make beautiful jewellery which are accessible,affordable and forever wearable.</p>
+ <p> As hundreds of women across the country, we came to find that there was a common dilemma women faced - picking between expensive jewellery for special occasion, and everyday jewellery that was of inferior quality and was not keeping pace with their changing lifestyle.We give women access to modern,fine jewellery,that was also wearable everyday. </p>
  </section>
   
 <section id="SERVICES">

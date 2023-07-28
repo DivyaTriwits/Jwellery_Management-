@@ -366,7 +366,7 @@ public function uploadimage(){
 
         $formArray=array();
        // $formArray['id'] = 
-        //$stockDetail= $this->Users_model->getStock($this->input->post('gold_type'));
+        $stockDetail= $this->Users_model->getStock($this->input->post('gold_type'));
         // echo $stockDetail[0]->id;
         $id=$this->input->post('id');
         $formArray['name'] = $this->input->post('name');
@@ -387,8 +387,10 @@ public function uploadimage(){
         $formArray['total'] = $this->input->post('total');
 
         $query=$this->Users_model->createuser1234($formArray);
-        // $stock = $stockDetail->weight-$this->input->post('weight');
-        $queryResult= $this->Users_model->updatStock($this->input->post('gold_type'),$this->input->post('weight'));
+         $stock = $stockDetail->weight-$this->input->post('weight');
+        $queryResult= $this->Users_model->updatStock($id,$stock);
+
+          // this->input->post('gold_type'),$this->input->post('weight'));
         if($query){
 
           $data['result']=$this->Users_model->getUsers123458($query);
