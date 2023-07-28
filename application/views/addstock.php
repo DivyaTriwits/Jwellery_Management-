@@ -100,7 +100,7 @@ button {
         
 
 
-       <form action="" method="">
+        <div class="form-group">
           <label>Gold Type:</label>
           <input type="text" name="gold_type" placeholder="enter the gold_type" id="gold_type" onkeypress="return allowOnlyLetters(event,this);" maximum =10 characters required />
         </div>

@@ -200,7 +200,7 @@
             $formArray['discount'] = $this->input->post('discount');
             $formArray['description'] = $this->input->post('description');
             // $formArray['jewelry_id'] = $this->input->post('jewelry_id');
-            $formArray['stock'] = $this->input->post('stock');
+            // $formArray['stock'] = $this->input->post('stock');
             $formArray['file'] = $picture;
             // calling the create function in user_model
             $check=$this->Users_model->uploadimg($formArray);
