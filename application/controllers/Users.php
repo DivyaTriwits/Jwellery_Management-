@@ -325,41 +325,6 @@ public function uploadimage(){
       }
 
 
-      // public function register1234(){
-      //     //$this->load->view('purchase');
-      //   $this->load->model('Users_model');
-
-      //   $formArray=array();
-      //  // $formArray['id'] = 
-      //   $stockDetail= $this->Users_model->getStock($this->input->post('gold_type'));
-      //   // echo $stockDetail[0]->id;
-      //   $id=$this->input->post('id');
-      //   $formArray['name'] = $this->input->post('name');
-      //   $formArray['gold_type'] = $stockDetail[0]->gold_type;
-      //  // $formArray['date'] = $this->input->post('date');
-      //   //$formArray['account_number'] = $this->input->post('account_number');
-      //   $formArray['payment_details'] = $this->input->post('payment_details');
-      //    $formArray['phonepay_number'] = $this->input->post('phonepay_number');
-      //   //$formArray['payment_details'] = $this->input->post('payment_details');
-      //   $formArray['credit_card_number'] = $this->input->post('credit_card_number');
-      //   $formArray['paytm_number'] = $this->input->post('paytm_number');
-       
-      //   $formArray['date'] = $this->input->post('date');
-      //   $formArray['cost'] = $this->input->post('cost');
-      //   $formArray['weight'] = $this->input->post('weight');
-      //   $formArray['discount'] = $this->input->post('discount');
-      //   $formArray['total'] = $this->input->post('total');
-
-      //   $query=$this->Users_model->createuser1234($formArray);
-      //   // $stock = $stockDetail->weight-$this->input->post('weight');
-      //   $queryResult= $this->Users_model->updatStock($this->input->post('gold_type'),$this->input->post('weight'));
-      //   if($query){
-
-      //     $data['result']=$this->Users_model->getUsers123458($query);
-      //     $this->load->view("pdfgenrator",$data);
-      //   }
-      // }
-
       public function register1234(){
           //$this->load->view('purchase');
         $this->load->model('Users_model');
@@ -370,13 +335,10 @@ public function uploadimage(){
         // echo $stockDetail[0]->id;
         $id=$this->input->post('id');
         $formArray['name'] = $this->input->post('name');
-        //$formArray['gold_type'] = $stockDetail[0]->gold_type;
-        $formArray['gold_type'] = $this->input->post('gold_type');
-       // $formArray['date'] = $this->input->post('date');
-        //$formArray['account_number'] = $this->input->post('account_number');
+        $formArray['gold_type'] = $stockDetail[0]->gold_type;
+        // $formArray['gold_type'] = $this->input->post('gold_type');
         $formArray['payment_details'] = $this->input->post('payment_details');
          $formArray['phonepay_number'] = $this->input->post('phonepay_number');
-        //$formArray['payment_details'] = $this->input->post('payment_details');
         $formArray['credit_card_number'] = $this->input->post('credit_card_number');
         $formArray['paytm_number'] = $this->input->post('paytm_number');
        
@@ -388,15 +350,14 @@ public function uploadimage(){
 
         $query=$this->Users_model->createuser1234($formArray);
          $stock = $stockDetail->weight-$this->input->post('weight');
-        $queryResult= $this->Users_model->updatStock($id,$stock);
-
-          // this->input->post('gold_type'),$this->input->post('weight'));
+        $queryResult= $this->Users_model->updatStock($this->input->post('gold_type'),$this->input->post('weight'));
         if($query){
 
           $data['result']=$this->Users_model->getUsers123458($query);
           $this->load->view("pdfgenrator",$data);
         }
       }
+    
 
 
       public function register12(){
@@ -646,58 +607,15 @@ public function downloadPDF()
   public function viewproductj4(){
    $this->load->view('productj');
  }
- // public function earing(){
- //       // here the user_model is loaded
- //  $this->load->model('Users_model');
- //  if(!empty($_FILES['picture']['name'])){
- //        //set the path for the image storage
- //    $config['upload_path'] = 'admin/uploads/images/'; 
- //          /*$config['file_path']= '/path/to/your/upload/';
- //          $config['full_path']= '/path/to/your/upload/jpg.jpg';  */
- //          // type of files allowed
- //          $config['allowed_types'] = 'jpg|jpeg|png|gif|img|docx';
- //          $config['file_name'] = $_FILES['picture']['name'];
- //          //Load upload library and initialize configuration
- //          $this->load->library('upload',$config);
- //          $this->upload->initialize($config);
- //          if($this->upload->do_upload('picture')){
- //          // file uploading is done by this
- //            $uploadData = $this->upload->data();
- //            // the filename name is stored in a variable
- //            $picture = $config['file_name'];
- //          }else{
- //            $picture = $config['file_name'];
- //          }
- //        }else{
- //          $picture = $config['file_name'];
- //        }
- //        //storing the data into the array
- //        $formArray = array();
- //        $formArray['gold_type'] = $this->input->post('gold_type');
- //         $formArray['price'] = $this->input->post('price');
- //         $formArray['weight'] = $this->input->post('weight');
- //          $formArray['discount'] = $this->input->post('discount');
- //           $formArray['description'] = $this->input->post('description');
- //        $formArray['file'] = $picture;
- //        // calling the create function in user_model
- //        $check=$this->Users_model->uploadearingimg($formArray);
- //        if($check==true){
- //          $this->load->model('Users_model'); 
- //          $data['result']=$this->Users_model->getAllearing();
- //          $this->load->view('dashboard1',$data);
- //        }
- //      }
+ 
       public function viewearing(){
        $this->load->view('earing');
      }
 
-    //  public function viewearinglist(){
-    //   $this->load->model('Users_model');
-    //   $data['result']=$this->Users_model->getAllearing();
-    //   $this->load->view("earing_list",$data);
+  
 
 
-    // }
+   
     public function bangles123(){
       //  $this->load->view('jewelrycategory');
       $this->load->model('Users_model');
@@ -709,34 +627,7 @@ public function downloadPDF()
         $this->load->view('dashboard1');
       }  
     }
-//     public function generate_invoice()
-//     {
-//       // Process invoice generation logic here
 
-//       // Redirect to the invoice page
-//       redirect('purchaseinvoice' . $purchase_id);
-//     }
-//     public function generate()
-//     {
-
-//     header("Content-Type: application/octet-stream");
-
-// $file = $_GET["purchaseinvoice"] .".pdf";
-// header("Content-Disposition: attachment; filename=" . urlencode($file));   
-// header("Content-Type: application/octet-stream");
-// header("Content-Type: application/download");
-// header("Content-Description: File Transfer");            
-// header("Content-Length: " . filesize($file));
-// flush(); // this doesn't really matter.
-// $fp = fopen($file, "r");
-// while (!feof($fp))
-// {
-//     echo fread($fp, 65536);
-//     flush(); // this is essential for large downloads
-// } 
-// fclose($fp); 
-
-//   }
 
    public function diamondimage(){
            // here the user_model is loaded

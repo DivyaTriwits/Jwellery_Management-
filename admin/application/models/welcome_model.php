@@ -9,12 +9,24 @@ class Welcome_model extends CI_Model
 
  
 
-    public function insertCSV($data)
-            {
-                $this->db->insert('addstock', $data);
-                return TRUE;
-            }
+    // public function insertCSV($data)
+    //         {
+    //             $this->db->insert('addstock', $data);
+    //             return TRUE;
+    //         }
+ public function insertCSV($data) {
+        // Assuming you are using CodeIgniter's Active Record (CI_DB_query_builder) to interact with the database
 
+        // Insert data into the 'addstock' table
+        $this->db->insert('addstock', $data);
+
+        // Check if the insertion was successful
+        if ($this->db->affected_rows() > 0) {
+            return true; // Success
+        } else {
+            return false; // Failed
+        }
+    }
 
 
     public function view_data(){
@@ -31,6 +43,8 @@ public function dashboard(){
         $this->load->view('dashboard1',$data);
 
        }
+      
+   
+
    }
-   ?>
 

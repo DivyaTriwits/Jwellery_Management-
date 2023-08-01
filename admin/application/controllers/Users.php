@@ -207,7 +207,7 @@
             if($check==true){
               $this->load->model('Users_model'); 
               $data['result']=$this->Users_model->getAllUsers123();
-              $this->load->view('dashboard1',$data);
+              $this->load->view('user_list',$data);
             }
           }
 
@@ -265,7 +265,7 @@
             $query = $this->Users_model->updateusers($id);
             
             $data['result']=$this->Users_model->getAllUsers();
-            $this->load->view('user_list',$data);
+            $this->load->view('dashboard1',$data);
           }
           
           public function delete($id){
@@ -671,11 +671,7 @@
       // FROM addstock a
       //  INNER JOIN jewelry_category c ON a.category_id = c.category_id;
 
-        public function get_jewelry_data() {
-          $data['jewelry_data'] = $this->Users_model->get_jewelry_with_category();
-          // Load a view to display the data or process it as needed
-          $this->load->view('user_list', $data);
-        }  
+        
       }
       ?>
 

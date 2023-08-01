@@ -119,24 +119,12 @@ button {
         <input type='file' name='picture' id="picture" > <br/>
       </div>
       
-      
-      
-
-      
-      
       <br/>
       
       <div class="form-group">
         <input type='submit' > <br/>
-      </div> 
-      
-      
+      </div>  
     </form>
-
-    
-    
-
-    
     <script>
      function allowOnlyLetters(e, t)   
      {    

@@ -1,174 +1,174 @@
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Add julary</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>bootstrap/css/bootstrap.min.css">
-  </head>
-</body>
-<style>
- font-family: Arial, Helvetica, sans-serif;
- background-color: black;
- <meta name="viewport" content="width=11">
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Add julary</title>
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>bootstrap/css/bootstrap.min.css">
+    </head>
+  </body>
+  <style>
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: black;
+   <meta name="viewport" content="width=11">
 
- * {
-  background: #555;
-}
-
-body{
-
-  background-color: #3164ff;
-}
-.container {
-  width: 1000px;
-  max-width: 2000px;
-  padding: 2em 1.5em;
-  background-color: #ffffff;
-  margin: 1em auto;
-  border-radius: 0.5em;
-}
-h4 {
-  font-size: 1.5em;
-}
-.input-section {
-  margin: 0.5em 0;
-}
-label,
-.error-message {
-  display: block;
-  font-size: 1em;
-}
-label {
-  margin-bottom: 0.5em;
-  font-weight: 500;
-}
-form {
-  display: flex; /* 2. display flex to the rescue */
-  flex-direction: row;
-}
-.error-message {
-  margin-top: 0.2em;
-}
-input,
-button {
-  display: block;
-  outline: none;
-  width: 30%;
-  padding: 0.5em;
-  border-radius: 0.3em;
-}
-input {
-  padding: 1em 0.5em;
-  border: 1.5px solid #d0d0d0;
-}
-button {
-  font-size: 1em;
-  background-color: #3164ff;
-  border: none;
-  color: #ffffff;
-  padding: 0.8em 0;
-  margin-top: 2em;
-}
-.required-color {
-  color: #ff4747;
-}
-.error {
-  border-color: #ff4747;
-}
-.valid {
-  border-color: #37a137;
-}
-.hide {
-  display: none;
-}
-@media only screen and (max-width: 450px) {
-  .container {
-    font-size: 14px;
+   * {
+    background: #555;
   }
-</style>
 
-<div class="container">
-  <h1 class="page-header text-center">Add Stock</h1>
-  <div class="row" >
-    <div class="col-sm-10 col-sm-offset-4" >
-      <h3>Add Form
-        <span class="pull-right"><a href="<?php echo base_url(); ?>" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> </a></span>
-      </h3>
-      <hr>
-      <form action="<?PHP echo base_url(). 'index.php/Users/silverimage' ?>"
-        method="post" enctype="multipart/form-data" name="silver">
+  body{
+
+    background-color: #3164ff;
+  }
+  .container {
+    width: 1000px;
+    max-width: 2000px;
+    padding: 2em 1.5em;
+    background-color: #ffffff;
+    margin: 1em auto;
+    border-radius: 0.5em;
+  }
+  h4 {
+    font-size: 1.5em;
+  }
+  .input-section {
+    margin: 0.5em 0;
+  }
+  label,
+  .error-message {
+    display: block;
+    font-size: 1em;
+  }
+  label {
+    margin-bottom: 0.5em;
+    font-weight: 500;
+  }
+  form {
+    display: flex; /* 2. display flex to the rescue */
+    flex-direction: row;
+  }
+  .error-message {
+    margin-top: 0.2em;
+  }
+  input,
+  button {
+    display: block;
+    outline: none;
+    width: 30%;
+    padding: 0.5em;
+    border-radius: 0.3em;
+  }
+  input {
+    padding: 1em 0.5em;
+    border: 1.5px solid #d0d0d0;
+  }
+  button {
+    font-size: 1em;
+    background-color: #3164ff;
+    border: none;
+    color: #ffffff;
+    padding: 0.8em 0;
+    margin-top: 2em;
+  }
+  .required-color {
+    color: #ff4747;
+  }
+  .error {
+    border-color: #ff4747;
+  }
+  .valid {
+    border-color: #37a137;
+  }
+  .hide {
+    display: none;
+  }
+  @media only screen and (max-width: 450px) {
+    .container {
+      font-size: 14px;
+    }
+  </style>
+
+  <div class="container">
+    <h1 class="page-header text-center">Add Stock</h1>
+    <div class="row" >
+      <div class="col-sm-10 col-sm-offset-4" >
+        <h3>Add Form
+          <span class="pull-right"><a href="<?php echo base_url(); ?>" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> </a></span>
+        </h3>
+        <hr>
+        <form action="<?PHP echo base_url(). 'index.php/Users/silverimage' ?>"
+          method="post" enctype="multipart/form-data" name="silver">
 
 
-        <label for="name">Product Name<span class="tx-danger">*</span></label>
-        <input type="text" class="form-control" name="product_name" 
-    id="product_name" onkeypress="return allowOnlyLetters( event,this);" required>
-        <!-- <input type="text" class="form-control" name="subject" id="subject" required> -->
-        <!-- <select class="form-control" name="product_name" id="product_name">
-          <option selected="" disabled="">Select Gold Type</option>
-          <option value = "Ring">Ring  
-          </option>  
-          <option value = "Necklace">Necklace   
-          </option>  
-          <option value = "chine">chainne  
-          </option>  
-          <option value = "Earrings">Earrings  
-          </option> 
-          <option value = "Pendant">Pendant  
-          </option> 
-          <option value = "Bangles">Bangles  
-          </option> 
-        </datalist></option>                                  
-      </select> -->            
+          <label for="name">Product Name<span class="tx-danger">*</span></label>
+          <input type="text" class="form-control" name="product_name" 
+          id="product_name" onkeypress="return allowOnlyLetters( event,this);" required>
+          <!-- <input type="text" class="form-control" name="subject" id="subject" required> -->
+          <!-- <select class="form-control" name="product_name" id="product_name">
+            <option selected="" disabled="">Select Gold Type</option>
+            <option value = "Ring">Ring  
+            </option>  
+            <option value = "Necklace">Necklace   
+            </option>  
+            <option value = "chine">chainne  
+            </option>  
+            <option value = "Earrings">Earrings  
+            </option> 
+            <option value = "Pendant">Pendant  
+            </option> 
+            <option value = "Bangles">Bangles  
+            </option> 
+          </datalist></option>                                  
+        </select> -->            
+      </div>
+      
+      
+      
+      <label>Weight:</label>
+      <input type="text" placeholder="Enter weight" name="weight" id="weight" onkeypress="return isNumber(event);" required />
+      
+      <label>Price:</label>
+      <input type="text" class="form-control" name="price" 
+      id="price" onkeypress="return isNumber(event);" required /> 
+
+      <label>Discount(%):</label>
+      <input type="text" class="form-control" name="discount"
+      id="discount" onkeypress="return isNumber(event);" required /> 
+      
+      <label >Upload the image:</label>
+      <input type='file' name='picture' id="picture" > <br/>
     </div>
-    
-    
-    
-    <label>Weight:</label>
-    <input type="text" placeholder="Enter weight" name="weight" id="weight" onkeypress="return isNumber(event);" required />
-    
-    <label>Price:</label>
-    <input type="text" class="form-control" name="price" 
-    id="price" onkeypress="return isNumber(event);" required /> 
+    <br/>
 
-    <label>Discount(%):</label>
-    <input type="text" class="form-control" name="discount"
-    id="discount" onkeypress="return isNumber(event);" required /> 
-    
-    <label >Upload the image:</label>
-    <input type='file' name='picture' id="picture" > <br/>
-  </div>
-  <br/>
-
-  <label>Description:</label>
-  <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
+    <label>Description:</label>
+    <!-- <textarea id="description" rows="4" cols="50"></textarea> -->
     <input type="text" class="form-control" name="description" 
     id="description" onkeypress="return isNumber(event);" required /> 
     <br>
-  
-  <div class="form-group">
-    <input type='submit' > <br/>
-  </div>          
-</form>
+    
+    <div class="form-group">
+      <input type='submit' > <br/>
+    </div>          
+  </form>
 
-<script>
- function allowOnlyLetters(e, t)   
- {    
-   if (window.event)    
+  <script>
+   function allowOnlyLetters(e, t)   
    {    
-    var charCode = window.event.keyCode;    
-  }    
-  else if (e)   
-  {    
-    var charCode = e.which;    
-  }    
-  else { return true; }    
-  if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || (charCode == 32))
+     if (window.event)    
+     {    
+      var charCode = window.event.keyCode;    
+    }    
+    else if (e)   
+    {    
+      var charCode = e.which;    
+    }    
+    else { return true; }    
+    if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || (charCode == 32))
 
-   return true;    
- else  
- {       
-  return false;    
-}           
+     return true;    
+   else  
+   {       
+    return false;    
+  }           
 } 
 
 function OnlyNumbers(e){
@@ -223,12 +223,12 @@ function validate(){
 }
 
 function validateBirthdate() {
-    // get current date
+      // get current date
   let currentDate = new Date();
-    // get input date
+      // get input date
   let input = document.getElementById("birthdate").value;
   let birthdate = new Date(input);
-    // return if age is over 18
+      // return if age is over 18
   let diff = new Date(currentDate - birthdate)
   let age = Math.abs(diff.getUTCFullYear() - 1970);
   alert(valid ? "Over 18" : "Under 18");
@@ -302,15 +302,15 @@ function getPrice() {
     })
   });
 </script>
-<!-- <p id="descriptionDisplay"></p>
-<script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const description = urlParams.get('description');
-        document.getElementById('descriptionDisplay').textContent = description;
-    </script> -->
-</form>
-</div>
-</div>
+  <!-- <p id="descriptionDisplay"></p>
+  <script>
+          const urlParams = new URLSearchParams(window.location.search);
+          const description = urlParams.get('description');
+          document.getElementById('descriptionDisplay').textContent = description;
+        </script> -->
+      </form>
+    </div>
+  </div>
 </div>
 </body>
 </html>
